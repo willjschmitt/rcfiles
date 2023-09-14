@@ -1,0 +1,6 @@
+; Place in %USERPROFILE%/.wslgconfig to apply to all WSL instances.
+[system-distro-env]
+; Helps with pixelation of DPI scaling.
+WESTON_RDP_FRACTIONAL_HI_DPI_SCALING=false
+; With high-DPI, high-resolution screens (e.g. 4K), this is necessary to make applications readable.
+WESTON_RDP_DEBUG_DESKTOP_SCALING_FACTOR=150
