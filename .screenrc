@@ -2,3 +2,6 @@
 # screen, with the time and date and with the current window highlighted.
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# Prevents the welcome screen from popping up on each screen session.
+startup_message off
