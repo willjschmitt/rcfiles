@@ -152,6 +152,9 @@ alias vim="nvim"
 alias vi="nvim"
 export EDITOR="nvim"
 
+# Make our bash readline edit mode vim-motions.
+set -o vi
+
 env=~/.ssh/agent.env
 
 agent_load_env() { test -f "$env" && . "$env" >|/dev/null; }
