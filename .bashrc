@@ -199,3 +199,6 @@ function gtc() {
 }
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Added by Antigravity CLI installer
+export PATH="/home/will/.local/bin:$PATH"
