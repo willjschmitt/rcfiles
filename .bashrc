@@ -142,7 +142,9 @@ unset __conda_setup
 
 alias pbcopy="xclip -sel clip"
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin
+if command -v go >/dev/null 2>&1; then
+  export PATH=$PATH:$(go env GOPATH)/bin
+fi
 export PATH=$PATH:$HOME/.tfenv/bin
 
 # Set default editor to neovim and override vim and vi to neovim.
@@ -198,7 +200,9 @@ function gtc() {
   gt track --parent="${PARENT}"
 }
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # Added by Antigravity CLI installer
 export PATH="/home/will/.local/bin:$PATH"
