@@ -210,3 +210,6 @@ fi
 
 # Added by Antigravity CLI installer
 export PATH="/home/will/.local/bin:$PATH"
+
+# Machine-specific config that shouldn't live in this repo.
+[ -f ~/.bashrc.local ] && . ~/.bashrc.local
