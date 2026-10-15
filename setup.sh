@@ -7,8 +7,10 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Packages the dotfiles depend on. jq is required by tmux-assistant-resurrect,
 # which silently skips installing its Claude hooks without it.
+# tmux is needed for .tmux.conf and its plugins.
 packages=(
   jq
+  tmux
 )
 
 for pkg in "${packages[@]}"; do
