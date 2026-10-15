@@ -56,3 +56,19 @@ for file in "${files[@]}"; do
   ln -s "$src" "$dest"
   echo "link $file: $dest -> $src"
 done
+
+confirm() {
+  local prompt="$1"
+  local reply
+  read -r -p "$prompt [y/N] " reply
+  [[ "$reply" =~ ^[Yy]$ ]]
+}
+
+tpm_dir="$HOME/.tmux/plugins/tpm"
+if [ -d "$tpm_dir" ]; then
+  echo "ok   tpm: already installed"
+elif confirm "tpm not found. Install to $tpm_dir via git clone?"; then
+  git clone https://github.com/tmux-plugins/tpm "$tpm_dir"
+else
+  echo "skip tpm: not installed"
+fi
